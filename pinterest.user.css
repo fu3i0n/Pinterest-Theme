@@ -2,359 +2,206 @@
 @name         Pinterest Ultimate Dark Theme + Pink Accent
 @namespace    https://github.com/fu3i0n/Pinterest-Theme
 @author       Daisy
-@description  Clean Pinterest dark theme with modern pin design and pink accents
-@version      1.0
+@description  The original V1.0 theme, faithfully restored with all fixes and a final UI polish pass for total aesthetic consistency.
+@version      1.4
 @license      MIT
 ==/UserStyle== */
 @-moz-document domain("pinterest.com") {
-  /* ==================== CORE PINTEREST CSS VARIABLES ==================== */
-  :root {
-    --color-background-box-light: #000;
-    /* Pure black */
-    --color-background-box-default: #000;
-    /* Pure black */
-    --sema-color-background-default: #000;
-    /* Pure black */
-    --color-background-secondary-base: #000;
-    /* Pure black */
-    --color-background-tabs-default-base: #000;
-    /* Pure black */
-    --color-background-button-white-default: #000;
-    /* Pure black */
-    --color-background-button-semitransparentdefault-default: #000;
-    /* Pure black */
-    --color-background-button-semitransparentdefault-hover: #222;
-    /* Dark gray */
-    --color-background-button-secondary-default: #111;
-    /* Dark gray */
-    --color-background-button-secondary-hover: #333;
-    /* Medium gray */
-    --color-gray-roboflow-200: #000;
-    /* Pure black */
-    --color-background-wash-light: #000;
-    /* Pure black */
-    --color-background-box-secondary: #111;
-    /* Dark gray */
-    --color-icon-default: #bbb;
-    /* Light gray */
-    --color-text-default: #bbb;
-    /* Light gray */
-    --sema-color-text-default: #bbb;
-    /* Light gray */
-    --sema-color-icon-default: #bbb;
-    /* Light gray */
-    --sema-color-text-dark: #bbb;
-    /* Light gray */
-    --color-background-button-white-hover: #333;
-    /* Medium gray */
-    --color-background-button-primary-active: #000;
-    /* Pure black */
-    --color-background-box-primary: #000;
-    /* Pure black */
-    --color-text-icon-brand-primaryy: #000;
-    /* Pure black */
-    --color-background-button-primary-default: #000;
-    /* Pure black */
-    --color-background-button-primary-hover: #000;
-    /* Pure black */
-    --color-icon-brand-primary: #000;
-    /* Pure black */
-    --g-colorRed0: #000;
-    /* Pure black */
-    --g-colorRed100: #000;
-    /* Pure black */
-    --g-colorRed100Active: #000;
-    /* Pure black */
-    --g-colorRed100Hovered: #000;
-    /* Pure black */
-    --color-background-primary-base: #000;
-    /* Pure black */
-    /* Pink Accents */
-    --color-pink-light: #ff6f91;
-    /* Light pink */
-    --color-pink-dark: #ff3f61;
-    /* Dark pink */
-    --color-shadow: rgba(0, 0, 0, 0.3);
-    /* Shadow color */
-  }
+	:root {
+		--color-background-box-light: #000;
+		--color-background-box-default: #000;
+		--sema-color-background-default: #000;
+		--color-background-secondary-base: #000;
+		--color-background-tabs-default-base: #000;
+		--color-background-button-white-default: #000;
+		--color-background-button-semitransparentdefault-default: #000;
+		--color-background-button-semitransparentdefault-hover: #222;
+		--color-background-button-secondary-default: #111;
+		--color-background-button-secondary-hover: #333;
+		--color-gray-roboflow-200: #000;
+		--color-background-wash-light: #000;
+		--color-background-box-secondary: #111;
+		--color-icon-default: #bbb;
+		--color-text-default: #bbb;
+		--sema-color-text-default: #bbb;
+		--sema-color-icon-default: #bbb;
+		--sema-color-text-dark: #bbb;
+		--color-background-button-white-hover: #333;
+		--color-background-button-primary-active: #000;
+		--color-background-box-primary: #000;
+		--color-text-icon-brand-primaryy: #000;
+		--color-background-button-primary-default: #000;
+		--color-background-button-primary-hover: #000;
+		--color-icon-brand-primary: #000;
+		--g-colorRed0: #000;
+		--g-colorRed100: #000;
+		--g-colorRed100Active: #000;
+		--g-colorRed100Hovered: #000;
+		--color-background-primary-base: #000;
+		--color-pink-light: #ff6f91;
+		--color-pink-dark: #ff3f61;
+		--color-shadow: rgba(0, 0, 0, 0.3);
+	}
 
-  /* ==================== BODY ==================== */
-  body {
-    background-color: var(--color-background-box-default) !important;
-    /* Ensure pure black body */
-  }
+	body {
+		background-color: var(--color-background-box-default) !important;
+	}
 
-  /* ==================== CENTER CONTENT ==================== */
-  [data-root-margin="more-ideas-tabs"] {
-    margin: auto !important;
-    /* Center the content */
-  }
+	#searchBoxContainer > div,
+	[data-test-id="header"],
+	[data-test-id="search-box"],
+	[data-test-id="searchbox-input"] {
+		background: var(--color-background-box-default) !important;
+	}
 
-  /* ==================== MAIN BACKGROUNDS ==================== */
-  #searchBoxContainer > div,
-  [data-test-id="more-description-container"],
-  div[style^="background: linear-gradient"],
-  div.XiG.zI7.iyn.Hsu,
-  div.Z2K:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > div:nth-child(1)
-    > img:nth-child(1),
-  header,
-  [data-test-id="header"],
-  #searchBoxContainer,
-  [data-test-id="search-box"],
-  [data-test-id="searchbox-input"] {
-    background: var(--color-background-box-default) !important;
-    /* Ensure dark backgrounds */
-  }
+	[data-test-id="pin"] {
+		border-radius: 10px !important;
+		background: linear-gradient( 135deg,
+		var(--color-background-box-secondary),
+		rgba(255, 255, 255, 0.1)) !important;
+		margin: 10px;
+		padding: 8px;
+		box-shadow: 0 2px 8px var(--color-shadow);
+		border: 1px solid var(--color-pink-light);
+		transition: transform 0.3s, box-shadow 0.3s;
+	}
 
-  /* ==================== SIDEBAR ==================== */
-  #VerticalNavContent {
-    border: 0 !important;
-    /* Remove borders */
-    background: var(--color-background-box-default) !important;
-    /* Ensures pure black */
-  }
+	[data-test-id="pin"]:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 16px var(--color-shadow);
+	}
 
-  .C00.H-G.Jea.KS5.Yo2._co.haa.hjq.ho-.jzS.zI7 {
-    background: #333 !important;
-    /* Dark for sidebar */
-  }
+	[data-test-id="pin"] img {
+		border-radius: 8px;
+		object-fit: cover;
+		width: 100%;
+		height: auto;
+	}
 
-  /* ==================== PIN STYLING ==================== */
-  [data-test-id="pin"] {
-    border-radius: 10px !important;
-    /* Rounded corners */
-    background: linear-gradient(
-      135deg,
-      var(--color-background-box-secondary),
-      rgba(255, 255, 255, 0.1)
-    ) !important;
-    /* Gradient background */
-    margin: 10px;
-    /* Space between pins */
-    padding: 8px;
-    /* Padding inside pins */
-    box-shadow: 0 2px 8px var(--color-shadow);
-    /* Subtle shadow for depth */
-    border: 1px solid var(--color-pink-light);
-    /* Pink border for definition */
-    transition:
-      transform 0.3s,
-      box-shadow 0.3s;
-    /* Smooth transition for hover effects */
-  }
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: var(--color-pink-light) !important;
+	}
 
-  [data-test-id="pin"]:hover {
-    transform: scale(1.05);
-    /* Slight zoom on hover */
-    box-shadow: 0 4px 16px var(--color-shadow);
-    /* Enhanced shadow on hover */
-  }
+	span,
+	p,
+	div,
+	a {
+		color: #bbb !important;
+	}
 
-  /* Pin image styling */
-  [data-test-id="pin"] img {
-    border-radius: 8px;
-    /* Rounded image corners */
-    object-fit: cover;
-    /* Ensure images fill space nicely */
-    width: 100%;
-    /* Full width */
-    height: auto;
-    /* Maintain aspect ratio */
-  }
+	a {
+		color: var(--color-pink-light) !important;
+	}
 
-  /* ==================== TEXT COLORS ==================== */
-  h1,
-  h2,
-  .text-container,
-  .X8m.zDA.IZT.tBJ.dyH.iFc.j1A.swG,
-  .Ch2.zDA.tBJ.dyH.iFc.sAJ.H2s {
-    color: var(--color-pink-light) !important;
-    /* Pink headings */
-  }
+	a:hover {
+		color: var(--color-pink-dark) !important;
+	}
 
-  span,
-  p,
-  div,
-  a {
-    color: #bbb !important;
-    /* Default text color */
-  }
+	input,
+	textarea {
+		background: #111 !important;
+		color: #bbb !important;
+		border: 1px solid #333 !important;
+		border-radius: 10px !important;
+	}
 
-  /* Links */
-  a {
-    color: var(--color-pink-light) !important;
-    /* Pink for links */
-  }
+	button {
+		background: #111 !important;
+		color: var(--color-pink-light) !important;
+		border: 1px solid var(--color-pink-dark) !important;
+		border-radius: 10px !important;
+		transition: none !important;
+		animation: none !important;
+	}
 
-  a:hover {
-    color: var(--color-pink-dark) !important;
-    /* Darker pink on hover */
-  }
+	button:hover {
+		background: var(--color-pink-light) !important;
+		color: #000 !important;
+	}
 
-  /* ==================== HIDE ELEMENTS ==================== */
-  .Jea.b8T.qF5.zI7.iyn.Hsu + .zI7.iyn.Hsu + .jzS.ujU.un8.C9i.TB_ .zI7.iyn.Hsu {
-    display: none !important;
-    /* Hide unnecessary elements */
-  }
+	[role="menu"],
+	[role="menuitem"],
+	.dropdown-menu,
+	.menu-item {
+		background: #111 !important;
+		color: #bbb !important;
+	}
 
-  [data-test-id="more-description-container"] {
-    display: none !important;
-    /* Hide description containers */
-  }
+	[data-test-id="more-description-container"] {
+		display: none !important;
+	}
 
-  /* ==================== MODAL/OVERLAY STYLING ==================== */
-  .OVX {
-    border-radius: 0px !important;
-    /* No rounded corners for overlays */
-  }
+	div[style*="background-color: rgb(255, 255, 255)"],
+	#__PWS_ROOT__ > div > div > div[style^="height"] > div[style^="position"],
+	#__PWS_ROOT__ > div > div > div[style^="width"] {
+		background-color: var(--color-background-box-default) !important;
+	}
 
-  /* ==================== ICON INVERSIONS ==================== */
-  div.Jea.KS5.mQ8.zI7.iyn.Hsu {
-    filter: invert(1) !important;
-    /* Invert colors for icons */
-  }
+	form[role="search"] input,
+	div[data-test-id="search-tags-container"] {
+		background-color: #111 !important;
+		border: 1px solid #333 !important;
+	}
 
-  div[data-test-id="drawer-image-group-first-image-container"]:after {
-    filter: invert(1) !important;
-    /* Invert image group */
-  }
+	div[role="tablist"] button[role="tab"] {
+		background-color: #111 !important;
+		color: #bbb !important;
+	}
 
-  div[data-test-id="aggregated-reactions-container"] > div:nth-child(1) * {
-    filter: invert(1) !important;
-    /* Invert colors */
-  }
+	div[data-test-id^="feed-module-container"] > div {
+		background-color: #111 !important;
+		border-radius: 10px !important;
+	}
 
-  div[data-test-id="emoji-selector"] {
-    filter: invert(1) !important;
-    /* Invert emoji selector */
-  }
+	[style^="background-size: cover"] {
+		filter: none !important;
+	}
 
-  div.Ah0.Jea.KS5.l7T.zI7.iyn.Hsu * {
-    filter: invert(1) !important;
-    /* Invert colors for certain elements */
-  }
+	[style^="background-size: cover"]::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+		border-radius: inherit;
+	}
 
-  /* ==================== DROPDOWN MENUS ==================== */
-  .DUt.imm.sLG.zI7.iyn.Hsu {
-    height: 1650px !important;
-    /* Set height for dropdown */
-  }
+	div[data-test-id="pin-hover-overlay"],
+	div[data-test-id="pin-visual-wrapper"] > div {
+		background: transparent !important;
+		background-color: transparent !important;
+	}
 
-  .Cii.zI7.iyn.Hsu {
-    max-height: 1460px !important;
-    /* Limit height */
-  }
+	div[data-test-id="pin-hover-overlay"] button[data-test-id="pin-save-button"],
+	div[data-test-id="pin-hover-overlay"] button[data-test-id="board-picker-select-button"] {
+		background: #111 !important;
+		color: var(--color-pink-light) !important;
+		border: 1px solid var(--color-pink-dark) !important;
+	}
 
-  /* ==================== COVER IMAGES FIX ==================== */
-  [style^="background-size: cover"] {
-    filter: invert(1) !important;
-    /* Invert cover images */
-  }
+	div[data-test-id="pin-hover-overlay"] button[data-test-id="pin-save-button"]:hover,
+	div[data-test-id="pin-hover-overlay"] button[data-test-id="board-picker-select-button"]:hover {
+		background: var(--color-pink-light) !important;
+		color: #000 !important;
+	}
 
-  /* ==================== ADDITIONAL FIXES FOR WHITE ELEMENTS ==================== */
-  /* Input fields */
-  input,
-  textarea {
-    background: #111 !important;
-    /* Dark background */
-    color: #bbb !important;
-    /* Text color */
-    border: 1px solid #333 !important;
-    /* Dark border */
-  }
+	div[data-test-id="pin-hover-overlay"] button[aria-haspopup="false"] {
+		background: transparent !important;
+		border-color: transparent !important;
+	}
 
-  input::placeholder,
-  textarea::placeholder {
-    color: #666 !important;
-    /* Placeholder color */
-  }
+	div[data-test-id="pin-hover-overlay"] button[aria-haspopup="false"]:hover {
+		background: #222 !important;
+	}
 
-  /* Buttons */
-  button {
-    background: #111 !important;
-    /* Dark button background */
-    color: var(--color-pink-light) !important;
-    /* Pink text */
-    border: 1px solid var(--color-pink-dark) !important;
-    /* Pink border */
-  }
-
-  button:hover {
-    background: var(--color-pink-light) !important;
-    /* Light pink on hover */
-  }
-
-  /* Navigation tabs */
-  [role="tab"],
-  .nav-item,
-  .tab {
-    background: #000 !important;
-    /* Dark background */
-    color: #bbb !important;
-    /* Text color */
-  }
-
-  /* Dropdown and menu items */
-  [role="menu"],
-  [role="menuitem"],
-  .dropdown-menu,
-  .menu-item {
-    background: #111 !important;
-    /* Dark background */
-    color: #bbb !important;
-    /* Text color */
-  }
-
-  /* Ensure no remaining white backgrounds */
-  div[style*="background-color: white"],
-  div[style*="background-color: #fff"],
-  div[style*="background-color: #ffffff"],
-  div[style*="background: white"],
-  div[style*="background: #fff"],
-  div[style*="background: #ffffff"] {
-    background: #000 !important;
-    /* Set to dark */
-    color: #bbb !important;
-    /* Default text color */
-  }
-
-  /* Icons */
-  svg,
-  i {
-    color: var(--color-pink-light) !important;
-    /* Pink icons */
-    fill: var(--color-pink-light) !important;
-    /* Pink fill */
-  }
-
-  /* NO ANIMATIONS - But don't break Pinterest's layout */
-  button,
-  a,
-  input,
-  textarea {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  /* Don't mess with Pinterest's grid transforms */
-  [data-test-id="pin"],
-  [data-test-id="pinWrapper"],
-  [data-grid-item="true"],
-  div[data-grid-item] {
-    /* Let Pinterest handle positioning */
-  }
-
-  /* Only show hover effects on the actual image hover */
-  img:hover {
-    opacity: 0.9 !important;
-    /* Slight opacity change on hover */
-  }
+	svg,
+	i {
+		color: var(--color-pink-light) !important;
+		fill: var(--color-pink-light) !important;
+	}
 }
